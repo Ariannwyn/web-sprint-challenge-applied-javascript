@@ -39,6 +39,9 @@ axios.get("https://lambda-times-api.herokuapp.com/articles")
     })
 
     .catch(error => {
+        cardsContainer.appendChild(errorPage);
+        const errorPage = document.createElement('h1');
+        errorPage.textContent='No articles to show!';
         console.log(error)
     })
 const cardMaker = (data) => {
